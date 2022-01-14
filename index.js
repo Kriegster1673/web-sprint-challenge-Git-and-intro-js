@@ -208,7 +208,7 @@ Practice accessing data above by console.log-ing following items:
 (no functions needed) */
 
 //(1) Name of the first artist (0th index) in the array
-//console.log(artists[0]);
+console.log(artists[0].name);
 
 //(2) Bio of the third artist (2nd index) in the array 
 //console.log(artists[2].bio);
@@ -294,7 +294,7 @@ function addArtist(array) {
   array.push(yup)
   return array 
 }
-console.log(addArtist(artists))
+
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -304,10 +304,18 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
-function lotsOfArt(/*Your Code Here*/) {
-  /*Your Code Here*/
+function lotsOfArt(array) {
+  const tottally = [];
+  for (let a = 0; a < array.length; a++){
+if (array[a].paintings > 100) {tottally.push(array[a].name)}
 }
 
+ return tottally
+
+
+}
+
+console.log(lotsOfArt(artists));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 8: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Use artistInfo to do the following: 
